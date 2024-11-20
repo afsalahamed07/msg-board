@@ -10,9 +10,13 @@
 		<div class="main">
 			<div class="messages">
 				<% messages.forEach((message) => { %>
-					<%- include ('message', {message:message}) %>
+					<a href="/messages/<%= message.id %>">
+						<%- include ('message', {message:message}) %>
+					</a>
 				<% }); %>
 			</div>
 		</div>
+
+		<a href="/new"><button type="button">Add New</button></a>
 	</body>
 </html>

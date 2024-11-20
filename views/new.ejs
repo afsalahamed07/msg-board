@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>New Form</title>
+		<link href="/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="main">
+			<form method="POST" action="/new">
+				<div class="input">
+					<label for="autor">Author</label>
+					<input type="text" name="author" value="author">
+				</div>
+
+				<div class="input">
+					<label for="message">Message</label>
+					<textarea id="txtArea" name="message" rows="10" cols="70"></textarea>
+				</div>
+
+				<input class="submit-btn" type="submit" value="submit">
+			</form>
+		</div>
+	</body>
+</html>

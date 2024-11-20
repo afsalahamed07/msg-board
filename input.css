@@ -3,17 +3,39 @@
 @tailwind utilities;
 
 .main {
-	@apply container mx-auto p-4;
+  @apply container mx-auto p-4;
 }
 
 .msg-box {
-	@apply flex flex-col gap-2 p-4;
+  @apply flex flex-col gap-2 p-4;
 }
 
 .msg-text {
-	@apply text-xl bg-gray-200 p-4;
+  @apply text-xl bg-gray-200 p-4;
 }
 
 .msg-details {
-	@apply flex justify-between;
+  @apply flex justify-between;
+}
+
+.input {
+  @apply flex flex-col gap-4 mt-4;
+
+  input {
+    @apply p-4 bg-gray-100 rounded-lg shadow-md;
+  }
+
+  label {
+    @apply px-4 text-lg;
+  }
+
+  textarea {
+    @apply p-4 bg-gray-100 rounded-lg shadow-md;
+  }
+}
+
+.submit-btn,
+button {
+  @apply px-4 py-2 bg-blue-500 text-white text-lg font-bold 
+	cursor-pointer hover:bg-blue-900 rounded-lg shadow-md;
 }

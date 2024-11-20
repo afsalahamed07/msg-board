@@ -4,6 +4,7 @@ import path, { dirname } from "path";
 import * as dotenv from 'dotenv';
 import { fileURLToPath } from "url";
 import indexRouter from "./routes/indexRouter";
+import newRouter from "./routes/newRouter";
 dotenv.config()
 
 const app = express();
@@ -23,7 +24,9 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 	res.status(500).send(err)
 });
 
-app.get("/", indexRouter)
+app.use(express.urlencoded({ extended: true }));
+app.use("/", indexRouter)
+app.use("/new", newRouter)
 
 const PORT = process.env.PORT || 3000;
 
