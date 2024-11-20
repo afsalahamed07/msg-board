@@ -3,7 +3,7 @@ import path, { dirname } from "path";
 
 import * as dotenv from 'dotenv';
 import { fileURLToPath } from "url";
-import messages from "./db";
+import indexRouter from "./routes/indexRouter";
 dotenv.config()
 
 const app = express();
@@ -17,14 +17,13 @@ app.use(express.static(assetPath));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+// TODO: extract eroro handler
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 	console.log(err);
 	res.status(500).send(err)
 });
 
-app.get("/", (req: Request, res: Response) => {
-	res.render("index", { messages: messages })
-})
+app.get("/", indexRouter)
 
 const PORT = process.env.PORT || 3000;
 

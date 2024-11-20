@@ -13,5 +13,14 @@ const messages: Message[] = [
 	}
 ];
 
-export default messages;
+async function getAllMessages(): Promise<Message[]> {
+	return messages;
+}
+
+const db = {
+	getAllMessages
+}
+
+export default db;
+
 

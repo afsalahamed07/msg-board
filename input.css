@@ -10,6 +10,10 @@
 	@apply flex flex-col gap-2 p-4;
 }
 
+.msg-text {
+	@apply text-xl bg-gray-200 p-4;
+}
+
 .msg-details {
 	@apply flex justify-between;
 }
