@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsx watch app.ts"
+    "build": "tsc && cp -r public dist/ && cp -r views dist/",
+    "start": "node dist/app.js",
+    "dev": "tsx watch app.ts"
   },
   "type": "module",
   "keywords": [],

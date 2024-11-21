@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { processNewMessage, sendForm } from "../controllers/newController";
+import { processNewMessage, sendForm } from "../controllers/newController.js";
 
 const newRouter: Router = Router();
 

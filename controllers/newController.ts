@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import Message from "../types/Message";
-import db from "../db";
+import Message from "../types/Message.js";
+import db from "../db.js";
 
 function processNewMessage(req: Request, res: Response) {
 	console.log("from con: ", req.body);

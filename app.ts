@@ -3,8 +3,8 @@ import path, { dirname } from "path";
 
 import * as dotenv from 'dotenv';
 import { fileURLToPath } from "url";
-import indexRouter from "./routes/indexRouter";
-import newRouter from "./routes/newRouter";
+import indexRouter from "./routes/indexRouter.js";
+import newRouter from "./routes/newRouter.js";
 dotenv.config()
 
 const app = express();
